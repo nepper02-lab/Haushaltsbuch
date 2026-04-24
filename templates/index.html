@@ -2,7 +2,10 @@
 <html>
 <head>
     <title>Haushaltsbuch</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
+
 <body>
 
 <h1>Willkommen {{ username }}</h1>
@@ -22,10 +25,12 @@
     <input name="desc" placeholder="Beschreibung" required>
     <input name="category" placeholder="Kategorie" required>
     <input name="amount" type="number" step="0.01" required>
+
     <select name="payer">
         <option value="A">A</option>
         <option value="B">B</option>
     </select>
+
     <select name="kind">
         <option value="shared">shared</option>
         <option value="private">private</option>
